@@ -86,15 +86,20 @@ void setup() {
 }
 
 void loop() {
+
+  float ng = analogRead(34);
   
   if(bleConnected){
     
+      if(ng>0){
+        String ng_str = String(ng);
+        String data_send = String(number);
+        Serial.printf("發送:%s\n",ng_str);
+        CountCharacteristic->setValue(data_send.c_str());
+        CountCharacteristic->notify();
+        number++;
+      }
       
-      String data_send = String(number);
-      Serial.printf("發送:%s\n",data_send);
-      CountCharacteristic->setValue(data_send.c_str());
-      CountCharacteristic->notify();
-      number++;
     
     }
   else{
