@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Learning home page</title>
+    <style>
+        html {
+         font-family: Arial;
+         display: inline-block;
+         margin: 0px auto;
+         text-align: center;
+        }
+        h2 { font-size: 3.0rem; }
+        p { font-size: 3.0rem; }
+        .units { font-size: 1.2rem; }
+        .dht-labels{
+          font-size: 1.5rem;
+          vertical-align:middle;
+          padding-bottom: 10px;
+        }
+        .button {
+            display: block;
+            width: 80px;
+            height: 50px;
+            background-color: #1abc9c;
+            border: none;
+            color: white;
+            padding: 13px 30px;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 0px auto 35px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button-on {
+            background-color: #3498db;
+        }
+        .button-on:active {
+            background-color: #3498db;
+        }
+        .button-off {
+            background-color: #34495e;
+        }
+        .button-off:active {
+            background-color: #2c3e50;
+        }
+        .WebServerHomepage{
+            display: flex;
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            flex-direction:row;
+            margin: 0px auto 20px;
+        }
+      </style>
+</head>
+<body>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        // $(function(){
+        //     $("#temperature").text("26");
+        //     $("#humidity").text("53");
+        // });
+
+        
+        
+    </script>
+    <h2>JM ESP32 Web Server</h2>
+    <div class="WebServerHomepage">
+        <!-- <input class="button button-on" type='button' onclick='ledon();' value="ON"/>
+        <input class="button button-off" type='button' onclick='ledoff();' value="OFF"/> -->
+        <!-- <a class="button button-off" href="/ledon">ON</a> -->
+        <!-- <a class="button button-on" type='button' onclick='WiFiPage();'>WiFi Configure</a> -->
+        <!-- <a class="button button-off" type='button' onclick='monitor();'>ESP32 Monitor</a> -->
+        <!-- <a class="button button-on" href="/ledoff">OFF</a> -->
+        <a class="button button-on" href="/wifimanage">WiFi Configure</a>
+        <a class="button button-off" href="/monitor">ESP32 Monitor</a> 
+    </div>
+</body>
+</html>
